@@ -1,0 +1,1 @@
+var w1 = new Warrior("Glenn", 666);
