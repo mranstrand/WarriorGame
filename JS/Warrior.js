@@ -1,9 +1,11 @@
-function Warrior(name, dmg) {
+function Warrior(name, dmg, startX, startY) {
 
     //Deklarera egenskaper
     this.name = name;
     this.dmg = dmg;
     this.hp = 100;
+    this.xPos = startX;
+    this.yPos = startY;
 
     // Definiera metoder
     this.hurt = function (damage) {
@@ -14,6 +16,13 @@ function Warrior(name, dmg) {
     this.attack = function (opponent) {
         console.log(this.name + "attackerar " + opponent.name + " med ett vildsint skrik!")
         opponent.hurt(this.dmg);
+
+    }
+
+    this.render = function () {
+
+        //Måla ut krigare
+        ctx.fillRect(this.xPos * 100, this.yPos * 100, 100, 100);
 
     }
 
