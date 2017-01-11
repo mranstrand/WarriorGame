@@ -20,6 +20,8 @@ function start() {
     w1.render();
     w2.render();
     w3.render();
+
+    window.setInterval()
 }
 
 function keyDown(e) {
